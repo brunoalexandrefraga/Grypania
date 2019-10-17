@@ -1,0 +1,3 @@
+Message[313] /home/u9dd/Projects/Grypania/Program4/Program_4.X/program.asm 4 : CBLOCK constants will start with a value of 0.
+Message[302] /home/u9dd/Projects/Grypania/Program4/Program_4.X/program.asm 11 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/u9dd/Projects/Grypania/Program4/Program_4.X/program.asm 12 : Register in operand not in bank 0.  Ensure that bank bits are correct.
