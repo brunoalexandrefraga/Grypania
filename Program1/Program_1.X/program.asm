@@ -16,7 +16,7 @@ Main
 
 Equal
     MOVLW .1
-    MOVWF W
+    MOVWF PORTA
     GOTO Main
 
 Different

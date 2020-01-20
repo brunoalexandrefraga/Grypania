@@ -1,4 +1,4 @@
-MPASM 5.84  /HOME/U9DD/PROJECTS/GRYPANIA/PRO   10-17-2019  8:48:54         PAGE  1
+MPASM 5.84  /HOME/U9DD/PROJECTS/GRYPANIA/PRO   10-31-2019  8:57:24         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -34,7 +34,7 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
                       00016 
 0009                  00017 Equal
 0009   3001           00018     MOVLW .1
-000A   0080           00019     MOVWF W
+000A   0085           00019     MOVWF PORTA
 000B   2???           00020     GOTO Main
                       00021 
 000C                  00022 Different
@@ -51,7 +51,7 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
 0012   0085           00033     MOVWF PORTA
 0013   2???           00034     GOTO Main
                       00035     END
-MPASM 5.84  /HOME/U9DD/PROJECTS/GRYPANIA/PRO   10-17-2019  8:48:54         PAGE  2
+MPASM 5.84  /HOME/U9DD/PROJECTS/GRYPANIA/PRO   10-31-2019  8:57:24         PAGE  2
 
 
 SYMBOL TABLE
@@ -110,7 +110,7 @@ RD                                00000000
 RP0                               00000005
 RP1                               00000006
 STATUS                            00000003
-MPASM 5.84  /HOME/U9DD/PROJECTS/GRYPANIA/PRO   10-17-2019  8:48:54         PAGE  3
+MPASM 5.84  /HOME/U9DD/PROJECTS/GRYPANIA/PRO   10-31-2019  8:57:24         PAGE  3
 
 
 SYMBOL TABLE
@@ -167,7 +167,7 @@ _WDT_ON                           00003FFF
 _XT_OSC                           00003FFD
 __16F84                           00000001
 
-MPASM 5.84  /HOME/U9DD/PROJECTS/GRYPANIA/PRO   10-17-2019  8:48:54         PAGE  4
+MPASM 5.84  /HOME/U9DD/PROJECTS/GRYPANIA/PRO   10-31-2019  8:57:24         PAGE  4
 
 
 

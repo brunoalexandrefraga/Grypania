@@ -28,7 +28,7 @@
         <targetDevice>PIC16F84</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool></platformTool>
+        <platformTool>Simulator</platformTool>
         <languageToolchain>MPASMWIN</languageToolchain>
         <languageToolchainVersion>5.84</languageToolchainVersion>
         <platform>2</platform>

@@ -1,4 +1,4 @@
-    #INCLUDE <p16F84.inc>
+    #INCLUDE <p16f84.inc>
     ORG 0x00
 
 Start
@@ -19,7 +19,7 @@ Equal
     GOTO Main
 
 Different
-    BCF PORTA, 0
+    BCF PORTA, 1
     GOTO Main
     
     END

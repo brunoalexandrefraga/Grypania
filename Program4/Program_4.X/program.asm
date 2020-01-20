@@ -1,7 +1,7 @@
     #INCLUDE <p16f84.inc>
     ORG 0x00
 
-    CBLOCK
+    CBLOCK 0x0C
     Number
     ENDC
 

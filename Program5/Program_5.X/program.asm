@@ -15,10 +15,10 @@ Start
 
 Main
     CLRF PORTA
-    BTFSS Start
+    BTFSS PORTA, 4
     GOTO $-1
 
-Fill
+Filled
     BSF PORTA, 1
     BCF PORTA, 0
     BTFSS PORTA, 3
@@ -30,7 +30,7 @@ Empty
     BTFSC PORTA, 2
     GOTO $-1
     DECFSZ N, F
-    GOTO Fill
+    GOTO Filled
     GOTO Main
 
     END

@@ -14,8 +14,10 @@
     Bk
     Ck
     ENDC
+    
+    ORG 0x00
  
- Start
+Start
     BTFSS PORTA, 4
     GOTO $-1
     MOVF PORTB, W
@@ -101,3 +103,5 @@
     SWAPF Ck, F
     MOVF Ck, W
     MOVWF PORTA
+
+    END
