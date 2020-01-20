@@ -1,0 +1,118 @@
+    #INCLUDE <p16f84.inc>
+    
+    CBLOCK
+    B1
+    B2
+    B3
+    MA
+    ME
+    ENDC
+
+    ORG 0x00
+
+Start
+    BSF STATUS, RP0
+    MOVLW 0xFF
+    MOVWF TRISB
+    MOVLW 0x01
+    MOVWF TRISA
+    BCF STATUS, RP0
+
+Main
+    BTFSS PORTA, 4
+    GOTO $-1
+    BTFSC PORTA, 4
+    GOTO $-1
+    MOVF PORTB, W
+    MOVWF B1
+
+    BTFSS PORTA, 4
+    GOTO $-1
+    BTFSC PORTA, 4
+    GOTO $-1
+    MOVF PORTB, W
+    MOVWF B2
+
+    BTFSS PORTA, 4
+    GOTO $-1
+    BTFSC PORTA, 4
+    GOTO $-1
+    MOVF PORTB, W
+    MOVWF B3
+
+    MOVF B1, W
+    SUBWF B2, W
+    BTFSS STATUS, C
+    GOTO B1IsGreater
+    GOTO B2IsGreater
+
+B1IsGreater
+    MOVF B1, W
+    MOVWF MA
+    MOVF B2, W
+    MOVWF ME
+    GOTO VerifyB3
+
+B2IsGreater
+   MOVF B2, W
+   MOVWF MA
+   MOVF B1, W
+   MOVWF ME
+
+VerifyB3
+    MOVF B3, W
+    SUBWF MA, W
+    BTFSS STATUS, C
+    GOTO B3MAME
+    MOVF B3, W
+    SUBWF ME, W
+    BTFSS STATUS, C
+    GOTO MAB3ME
+    GOTO MAMEB3
+
+B3MAME
+    MOVF B3, W
+    MOVWF PORTA
+    SWAPF B3, F
+    MOVWF PORTA
+    MOVF MA, W
+    MOVWF PORTA
+    SWAPF MA, F
+    MOVWF PORTA
+    MOVF ME, W
+    MOVWF PORTA
+    SWAPF ME, F
+    MOVWF PORTA
+    GOTO Main
+    
+MAMEB3
+    MOVF MA, W
+    MOVWF PORTA
+    SWAPF MA, F
+    MOVWF PORTA
+    MOVF ME, W
+    MOVWF PORTA
+    SWAPF ME, F
+    MOVWF PORTA
+    MOVF B3, W
+    MOVWF PORTA
+    SWAPF B3, F
+    MOVWF PORTA
+    GOTO Main
+    
+MAB3ME
+    MOVF MA, W
+    MOVWF PORTA
+    SWAPF MA, F
+    MOVWF PORTA
+    MOVF B3, W
+    MOVWF PORTA
+    SWAPF B3, F
+    MOVWF PORTA
+    MOVF ME, W
+    MOVWF PORTA
+    SWAPF ME, F
+    MOVWF PORTA
+    GOTO Main
+
+    END
